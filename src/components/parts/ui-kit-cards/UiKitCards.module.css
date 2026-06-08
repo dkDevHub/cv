@@ -1,0 +1,10 @@
+.ui_grid {
+    width: 100%;
+    columns: 4 250px;
+    column-gap: 16px;
+}
+
+.ui_grid > div {
+    break-inside: avoid;
+    margin-bottom: 16px;
+}

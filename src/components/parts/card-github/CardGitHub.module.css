@@ -1,0 +1,22 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.label {
+    font-size: 14px;
+    color: var(--muted-foreground);
+}

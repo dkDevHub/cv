@@ -1,0 +1,9 @@
+.card_base {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: var(--card);
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}

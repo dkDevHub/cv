@@ -1,0 +1,28 @@
+.copy {
+    position: relative;
+    cursor: pointer;
+    transition: color .2s, transform .2s;
+    user-select: none;
+    text-align: center;
+
+    &:hover {
+        color: var(--foreground);
+    }
+
+    &:active {
+        transform: translateY(-2px);
+    }
+
+    &:active .label {
+        animation: copy_label .4s;
+    }
+}
+
+.label {
+    color: var(--foreground);
+    font-size: 14px;
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    opacity: 0;
+}

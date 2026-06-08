@@ -1,0 +1,28 @@
+.card_message {
+    --background-color: oklch(var(--foreground-oklch) / 0.1); 
+    border-radius: 16px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-image: linear-gradient(to top, var(--background-color), transparent);
+    background-color: var(--background-color);
+    text-align: left;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+    min-width: 250px;
+}
+
+.avatar {
+    border-radius: 99px;
+}
+
+.name {
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.comment {
+    color: oklch(var(--foreground-oklch) / 0.75);
+    font-size: 14px;
+}

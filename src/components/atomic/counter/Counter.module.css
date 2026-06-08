@@ -1,0 +1,14 @@
+.counter {
+    display: flex;
+    width: fit-content;
+    gap: 2px;
+}
+
+.input input {
+    height: 28px;
+    width: 64px;
+    text-align: center;
+    font-weight: 500;
+    padding: 0 4px;
+    border-radius: 6px;
+}

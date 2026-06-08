@@ -1,0 +1,19 @@
+.text_block {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+
+    @media (width >= 800px) {
+        flex-direction: column;
+    }
+}
+
+.exp {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.glow {
+    filter: drop-shadow(0 3px 3px oklch(var(--foreground-oklch) / .33));
+}

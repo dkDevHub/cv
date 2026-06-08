@@ -1,0 +1,184 @@
+.hero {
+    align-items: center;
+    background-color: black;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content {
+    margin-top: 100px;
+    padding-bottom: 40px;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    z-index: 5;
+
+    @media (--sm) {
+        margin-top: 150px;
+        
+        text-align: center;
+    }
+}
+
+.scene {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.headline {
+    filter: drop-shadow(0px 0px 6px  oklch(var(--foreground-oklch, 0 0 0) / 0.6));
+}
+/* 
+.headline :global(.word) {
+    filter: drop-shadow(0px 0px 6px  oklch(var(--foreground-oklch, 0 0 0) / 0.6));
+} */
+
+.subtitle {
+    font-size: 16px;
+    color: oklch(var(--foreground-oklch, 0 0 0) / 0.66);
+    max-width: 500px;
+}
+
+.bottom {
+    margin-top: 60px;
+}
+
+.marquee {
+    max-width: 700px; 
+    padding: 8px;
+    mask-image: linear-gradient(
+        to right,
+        transparent 1%,
+        black 15%,
+        black 85%,
+        transparent 99%
+    );
+}
+
+.cards {
+    margin-top: 32px;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 32px;
+}
+
+.messages {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: none;
+
+    @media (--md) {
+        display: initial;
+    }
+}
+
+.message1, .message2, .message3, .message4 {
+    position: absolute;
+    scale: 0.8;
+
+    @media (--lg) {
+        scale: 0.9;
+    }
+
+    @media (--xl) {
+        scale: 1;
+    }
+}
+
+.message1 {
+    right: -8%;
+    top: 110px;
+
+    @media (--xl) {
+        right: 8%;
+        top: 130px;
+    }
+}
+
+.message2 {
+    left: -2%;
+    top: 350px;
+
+    @media (--lg) {
+        left: 1%;
+    }
+
+    @media (--xl) {
+        left: 7%;
+        top: 320px;
+    }
+}
+
+.message3 {
+    right: 1%;
+    top: 440px;
+
+    @media (--xl) {
+        right: 10%;
+        top: 420px;
+    }
+}
+
+/* .message4 {
+    left: 3%;
+    top: 540px;
+} */
+
+.fade {
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.fade_top {
+    left: 0;
+    top: 0;
+    background: linear-gradient(to top, transparent, var(--background));
+    width: 100%;
+    height: 200px;
+}
+
+.fade_bottom {
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent, var(--background));
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+}
+
+.fade_left {
+    top: 0;
+    left: 0;
+    background: linear-gradient(to left, transparent, black);
+    width: 100px;
+    height: 100%;
+    z-index: 1;
+}
+
+.fade_right {
+    top: 0;
+    right: 0;
+    background: linear-gradient(to right, transparent, black);
+    width: 100px;
+    height: 100%;
+    z-index: 1;
+}

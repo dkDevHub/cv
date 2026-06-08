@@ -1,0 +1,147 @@
+@keyframes start-loading-anim {
+    0% {
+        opacity: 0.5;
+        transform: scale(0) rotate(0);
+    }
+    40% {
+        opacity: 1;
+        transform: scale(0.85) rotate(120deg);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1) rotate(240deg);
+    }
+    100% {
+        opacity: 0.75;
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+@keyframes loading-anim {
+    0% {
+        opacity: 0.5;
+        transform: scale(1) rotate(0);
+    }
+    40% {
+        opacity: 1;
+        transform: scale(0.85) rotate(120deg);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(0.85) rotate(240deg);
+    }
+    100% {
+        opacity: 0.5;
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+.button {
+    appearance: none;
+    touch-action: manipulation;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    background-color: var(--primary);
+    color: var(--primary-text);
+    padding: 0 20px;
+    border-radius: 10px;
+    height: 40px;
+    font-weight: 600;
+    transition: transform .2s, background-color .2s, color .2s;
+    box-shadow: var(--shadow-md);
+}
+.button:active {
+    transform: scale(0.93);
+}
+.button:hover {
+    background-color: oklch(var(--primary-oklch) / 0.75);
+}
+
+.button.button_icon {
+    padding: 0;
+    width: 40px;
+}
+
+.button_sm {
+    height: 36px;
+    gap: 4px;
+    border-radius: 8px;
+    padding: 0 16px;
+}
+
+.button_icon_sm {
+    padding: 0;
+    width: 32px;
+    height: 32px;
+}
+
+.button_icon_xs {
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+}
+
+.button.button_disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+}
+
+.button_outline {
+    background-color: transparent;
+    border: 2px solid var(--foreground);
+    color: var(--foreground);
+}
+.button_outline:hover {
+    background-color: var(--foreground);
+    color: var(--background);
+}
+
+.button_ghost {
+    background-color: transparent;
+    color: var(--foreground);
+    box-shadow: none;
+}
+.button_ghost:hover {
+    background-color: oklch(var(--foreground-oklch) / 0.1);
+}
+
+.button_shadow {
+    background-color: transparent;
+    color: var(--muted-text);
+    border: 1px solid var(--border);
+}
+.button_shadow:hover {
+    background-color: oklch(var(--foreground-oklch) / 0.1);
+}
+
+.button_neutral {
+    background-color: var(--foreground);
+    color: var(--background);
+}
+
+.button_neutral:hover {
+    background-color: oklch(var(--foreground-oklch) / 0.75);
+}
+
+.loader {
+    display: none;
+    color: var(--primary-text);
+}
+
+.button.button_loading {
+    cursor: wait;
+}
+
+.button.button_loading svg:not(.loader) {
+    display: none;
+}
+
+.button.button_loading .loader {
+    display: block;
+    animation: start-loading-anim 0.7s ease-out, loading-anim 0.7s 0.7s ease-out infinite;
+}

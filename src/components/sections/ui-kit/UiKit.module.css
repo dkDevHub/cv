@@ -1,0 +1,54 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+}
+
+.ui_grid {
+    width: 100%;
+    columns: 4 250px;
+    column-gap: 16px;
+}
+
+.ui_grid > div {
+    break-inside: avoid;
+    margin-bottom: 16px;
+}
+
+.api {
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+
+    @media (--md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1000px;
+    }
+}
+
+.bg {
+    --mask-inset: 60px;
+    mask-image: 
+        linear-gradient(to right, transparent, #000 var(--mask-inset), #000 calc(100% - var(--mask-inset)), transparent),
+        linear-gradient(to bottom, transparent, #000 var(--mask-inset), #000 calc(100% - var(--mask-inset)), transparent);
+    mask-composite: intersect;
+
+    opacity: 0.5;
+    position: absolute;
+    bottom: 70px;
+    z-index: -1;
+    overflow: hidden;
+
+    display: none;
+
+    @media (--lg) {
+        display: block;
+    }
+}

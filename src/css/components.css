@@ -1,0 +1,139 @@
+.section {
+    @apply w-full flex flex-col items-center;
+}
+
+.text-gradient {
+    --tw-gradient-position: to bottom right in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+    color: rgba(0, 0, 0, 0);
+    background-clip: text;
+    display: inline-block;
+}
+
+.bg-glass {
+    backdrop-filter: blur(8px);
+    background: oklch(37.1% 0 0 / .5);
+}
+
+.bg-liquid-glass {
+    backdrop-filter: blur(4px);
+    background: oklch(var(--background-oklch) / .5);
+}
+
+@supports not (hanging-punctuation:first) {
+    /* .bg-glass {
+        backdrop-filter: url(#displacementFilter);
+    } */
+
+    .bg-liquid-glass {
+        backdrop-filter: url(#de-glass-distortion) blur(2px);
+    }
+}
+
+.accent-glow {
+    filter: drop-shadow(0 3px 3px oklch(var(--foreground-oklch) / .4));
+}
+
+.accent-glow-sm {
+    filter: drop-shadow(0 1px 1px oklch(var(--foreground-oklch) / .4));
+}
+
+.split-type:not(:has(.js-show-anim)) {
+    opacity: 0;
+}
+
+.split-type.is-headless {
+    opacity: 1 !important;
+}
+
+.js-show-anim {
+    --easing: cubic-bezier(0, 0.55, 0.45, 1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.4s var(--easing), 
+                transform 1.4s var(--easing);
+    will-change: opacity, transform;
+}
+
+.js-show-anim.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.headline-shadow {
+    color: var(--foreground);
+    filter: drop-shadow(3px 3px 0px oklch(var(--foreground-oklch) / .3));
+}
+
+.hero-headline {
+    font-size: 40px;
+    line-height: calc(2.5 / 2.25);
+
+    @media (--sm) {
+        font-size: 48px;
+    }
+
+    @media (--md) {
+        font-size: 56px;
+        line-height: 1.12;
+    }
+
+    @media (--lg) {
+        font-size: 72px;
+        line-height: 1.2;
+    }
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 700;
+    scroll-margin: 100px;
+}
+
+.h1 {
+    font-size: 28px;
+    line-height: calc(32 / 28);
+}
+
+.h2 {
+    font-size: 24px;
+    line-height: calc(28 / 24);
+}
+
+.h3 {
+    font-size: 20px;
+    line-height: calc(24 / 20);
+}
+
+.h4 {
+    font-size: 18px;
+    line-height: calc(22 / 18);
+}
+
+@media (--sm) {
+    .h1 {
+        font-size: 36px;
+        line-height: 1.05;
+    }
+
+    .h2 {
+        font-size: 30px; 
+        line-height: calc(36 / 30);
+    }
+
+    .h3 {
+        font-size: 24px; 
+        line-height: calc(32 / 24);
+    }
+
+    .h4 {
+        font-size: 20px; 
+        line-height: calc(28 / 20);
+    }
+}
+
+@media (--lg) {
+    .h1 {
+        font-size: 48px;
+        line-height: 1.05;
+    }
+}

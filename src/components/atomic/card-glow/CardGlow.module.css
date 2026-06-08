@@ -1,0 +1,33 @@
+.card_glow {
+    position: relative;
+    padding: 12px;
+    overflow: hidden;
+    outline: 1px solid var(--border);
+    outline-offset: -1px;
+    border-radius: 16px;
+    box-shadow: 0 16px 40px #46394780;
+    
+    &:hover .bg {
+        filter: hue-rotate(-60deg) saturate(150%) brightness(120%);
+    }
+
+    @media (--sm) {
+        padding: 24px;
+        border-radius: 24px;
+    }
+}
+
+.content {
+    z-index: 1;
+}
+
+.bg {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: radial-gradient(closest-side at center, var(--color-mauve-800) 35%, transparent 140%), radial-gradient(at 9% 67%, #4c7fff24 0px, transparent 50%), radial-gradient(at 22% 0%, #61b0ff4a 0px, transparent 50%), radial-gradient(at 97% 49%, #bdbdff59 0px, transparent 50%), radial-gradient(at 100% 75%, #d580ff42 0px, transparent 50%), radial-gradient(at 75% 100%, #ffb58a30 0px, transparent 50%), radial-gradient(at 40% 100%, #6666ff26 0px, transparent 50%), radial-gradient(at 72% 0%, #ff85a72b 0px, transparent 50%);
+    transition: filter 0.5s;
+}

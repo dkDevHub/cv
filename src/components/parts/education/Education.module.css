@@ -1,0 +1,54 @@
+.education {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    @media (--lg) {
+        gap: 8px;
+    }
+}
+
+.edu_title {
+    display: flex;
+    align-items: end;
+    gap: 16px;
+    max-width: 700px;
+}
+
+.glow {
+    filter: drop-shadow(0 3px 3px oklch(var(--foreground-oklch) / .33));
+}
+
+.glow_logo {
+    filter: drop-shadow(0 3px 3px #3a3b93af);
+}
+
+.edu_img {
+    display: none;
+    width: 80px;
+    height: 80px;
+
+    @media (--sm) {
+        display: block;
+    }
+
+    @media (--lg) {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.bottom_text {
+    margin-left: 0px;
+    display: flex;
+    gap: 0px 8px;
+    flex-wrap: wrap;
+
+    @media (--sm) {
+        margin-left: 96px;
+    }
+
+    @media (--lg) {
+        margin-left: 116px;
+    }
+}

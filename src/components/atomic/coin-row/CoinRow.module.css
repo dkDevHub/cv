@@ -1,0 +1,59 @@
+@keyframes flashGreen {
+    0% {
+        color: #4ade80;
+    }
+    30% {
+        color: #4ade80;
+    }
+    100% {
+        color: var(--foreground);
+    }
+}
+
+@keyframes flashRed {
+    0% {
+        color: var(--destructive);
+    }
+    30% {
+        color: var(--destructive);
+    }
+    100% {
+        color:  var(--foreground);
+    }
+}
+
+.long {
+  animation: flashGreen 0.7s linear forwards;
+}
+
+.short {
+  animation: flashRed 0.7s linear forwards;
+}
+
+.row {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-weight: 500;
+}
+
+.ticker {
+    color: var(--muted-foreground);
+    font-size: 12px;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: var(--foreground);
+    }
+}
+
+.price {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.img {
+    border-radius: 9999px;
+}

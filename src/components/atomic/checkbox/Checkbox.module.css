@@ -1,0 +1,96 @@
+@keyframes start-loading-anim {
+    0% {
+        opacity: 0.25;
+        transform: scale(0.5) rotate(0);
+    }
+    40% {
+        opacity: 0.5;
+        transform: scale(1) rotate(120deg);
+    }
+    60% {
+        opacity: 0.5;
+        transform: scale(1) rotate(240deg);
+    }
+    100% {
+        opacity: 0.25;
+        transform: scale(0.8) rotate(360deg);
+    }
+}
+
+@keyframes loading-anim {
+    0% {
+        opacity: 0.25;
+        transform: scale(0.85) rotate(0);
+    }
+    40% {
+        opacity: 0.5;
+        transform: scale(1) rotate(120deg);
+    }
+    60% {
+        opacity: 0.5;
+        transform: scale(1) rotate(240deg);
+    }
+    100% {
+        opacity: 0.25;
+        transform: scale(0.85) rotate(360deg);
+    }
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    width: max-content;
+    gap: 8px;
+    position: relative;
+    touch-action: manipulation;
+}
+
+.checkbox input {
+    display: none;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    color: transparent;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.children {
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.checkbox:has(input:checked) .status {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--background);
+}
+
+.checkbox .loader {
+    position: absolute;
+    left: 2px;
+    color: var(--foreground);
+    display: none;
+}
+
+.checkbox.loading .status {
+    opacity: 0;
+}
+
+.checkbox.loading .loader {
+    display: flex;
+    animation: start-loading-anim 0.6s ease-out, loading-anim 0.6s 0.6s ease-out infinite;
+}
+
+.checkbox.loading .children {
+    transform: translateX(4px);
+    opacity: 0.7;
+}

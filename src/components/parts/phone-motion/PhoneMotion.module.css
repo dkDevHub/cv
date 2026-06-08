@@ -1,0 +1,36 @@
+.phone_motion {
+    width: 200px;
+    height: 410px;
+
+    @media (--lg) {
+        width: 245px;
+        height: 500px;
+    }
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://static.mocortech.com/image-host/index/20250918-113015.db5b7e1b3684.webp");
+    z-index: 1;
+}
+
+.video {
+    width: 89%;
+    height: auto;
+    max-height: 98%;
+    border-radius: 30px;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}

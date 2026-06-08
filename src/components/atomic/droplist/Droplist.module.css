@@ -1,0 +1,57 @@
+.droplist {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.trigger {
+    cursor: pointer;
+    width: max-content;
+    transition: color .2s;
+} 
+
+.trigger:has(:checked) {
+    color: var(--primary);
+}
+
+.trigger input{
+    display: none;
+}
+
+.title {
+    touch-action: manipulation;
+    user-select: none;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.title svg {
+    transition: transform .2s;
+}
+
+.trigger:has(:checked) .title svg {
+    transform: rotate(90deg);
+}
+
+.wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .2s;
+}
+
+.content {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.droplist:has(.trigger>:checked) .wrapper{
+    grid-template-rows: 1fr;
+}
