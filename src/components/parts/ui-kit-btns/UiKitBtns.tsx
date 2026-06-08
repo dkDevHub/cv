@@ -29,10 +29,10 @@ function UiKitBtns() {
                 <span className="text-muted-foreground font-medium">Icon</span>
             </Divider>
             <div className="flex flex-wrap gap-2">
-                <Button size="icon" variant="neutral">
+                <Button size="icon" variant="neutral" aria-label="neutral icon button">
                     <ShoppingCart size={20} strokeWidth={2.25} />
                 </Button>
-                <Button size="icon" variant="ghost">
+                <Button size="icon" variant="ghost" aria-label="ghost icon button">
                     <ShoppingCart size={20} strokeWidth={2.25} />
                 </Button>
                 <Button variant="neutral">
@@ -44,7 +44,7 @@ function UiKitBtns() {
                 <span className="text-muted-foreground font-medium">State</span>
             </Divider>
             <div className="flex flex-wrap gap-2">
-                <Button size="icon" variant="outline" isLoading={true}>
+                <Button size="icon" variant="outline" isLoading={true} aria-label="loading state on button">
                     <ShoppingCart size={20} strokeWidth={2.25} />
                 </Button>
                 <Button className="w-32" variant="neutral" isLoading={loading} onClick={handleClick}>

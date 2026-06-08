@@ -46,7 +46,7 @@
     gap: 4px;
     flex-shrink: 0;
     background-color: var(--primary);
-    color: var(--primary-text);
+    color: var(--background);
     padding: 0 20px;
     border-radius: 10px;
     height: 40px;
@@ -126,6 +126,11 @@
 
 .button_neutral:hover {
     background-color: oklch(var(--foreground-oklch) / 0.75);
+}
+
+.button_glass {
+    background-color: oklch(37.1% 0 0 / .6);
+    backdrop-filter: blur(8px);
 }
 
 .loader {

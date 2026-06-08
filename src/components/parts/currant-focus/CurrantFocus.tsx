@@ -9,7 +9,7 @@ function CurrantFocus() {
         <div className={cl.currant_focus}>
             <div className={cl.title}>
                 <h2 className="h2">Current general focus</h2>
-                <span className="text-foreground/40">What I am learning now</span>
+                <span className="text-foreground/50">What I am learning now</span>
             </div>
             <div className={cl.info}>
                 <div className={cl.exp}>

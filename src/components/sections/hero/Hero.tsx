@@ -32,31 +32,32 @@ function Hero({ className }: Props) {
                             <span>developer</span>
                         </h1>
                     </SplitText> */}
-                    <h1 className={`${cl.headline} hero-headline`} id="hero">
-                        <span className="hidden sm:inline">👋</span>
-                        <span>{" I'm Dmytro"}</span>
-                        <br />
-                        <span
-                            className={
-                                cl.text_gr +
-                                " text-gradient from-[rgb(71,188,255)] from-20% via-[rgb(255,202,202)] to-[rgb(255,255,85)]"
-                            }
-                        >
-                            Frontend
-                        </span>
-                        <span>{" developer"}</span>
-                    </h1>
+                    <SplitText>
+                        <h1 className={`${cl.headline} hero-headline`} id="hero">
+                            <span className="hidden sm:inline">👋</span>
+                            <span>{" I'm Dmytro"}</span>
+                            <br />
+                            <span
+                                className={
+                                    cl.text_gr +
+                                    " text-gradient from-[rgb(71,188,255)] from-20% via-[rgb(255,202,202)] to-[rgb(255,255,85)]"
+                                }
+                            >
+                                Frontend
+                            </span>
+                            <span>{" developer"}</span>
+                        </h1>
+                    </SplitText>
                     <p className={cn(cl.subtitle, "js-show-anim")}>
                         with experience in React, Next.js, and TypeScript. Passionate about creating beautiful and
                         functional web applications.
                     </p>
 
-                    <a
-                        href="#tech"
-                        className={cn("mt-12 w-60 !shadow-lg shadow-primary/33 js-show-anim", buttonVariants())}
-                    >
-                        More <ChevronDown size="22" strokeWidth={2.25} />
-                    </a>
+                    <div className="js-show-anim">
+                        <a href="#tech" className={cn("mt-12 w-60 !shadow-lg shadow-primary/33", buttonVariants())}>
+                            More <ChevronDown size="22" strokeWidth={2.25} />
+                        </a>
+                    </div>
 
                     <div className={cl.bottom}>
                         <div className={cl.marquee + " bg-liquid-glass"}>

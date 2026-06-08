@@ -9,6 +9,7 @@ export const buttonVariants = cva(cl.button, {
             outline: cl.button_outline,
             ghost: cl.button_ghost,
             shadow: cl.button_shadow,
+            glass: cl.button_glass
         },
         size: {
             default: [],

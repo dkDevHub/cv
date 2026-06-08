@@ -57,7 +57,7 @@ function Counter({ initialValue, onChange, min = 1, max = 999 }: Props) {
     
     return (
         <div className={cl.counter}>
-            <Button className={cl.button} variant={"ghost"} size={"icon-xs"} onClick={() => changeCount(count + 1)}>
+            <Button className={cl.button} variant={"ghost"} size={"icon-xs"} onClick={() => changeCount(count + 1)} aria-label="counter plus">
                 <Plus size={16} strokeWidth={2.5} />
             </Button>
             <Input
@@ -69,8 +69,9 @@ function Counter({ initialValue, onChange, min = 1, max = 999 }: Props) {
                 max={String(max)}
                 min={String(min)}
                 ignoreFilledStyle
+                aria-label="counter input"
             />
-            <Button className={cl.button} variant={"ghost"} size={"icon-xs"} onClick={() => changeCount(count - 1)}>
+            <Button className={cl.button} variant={"ghost"} size={"icon-xs"} onClick={() => changeCount(count - 1)} aria-label="counter minus">
                 <Minus size={16} strokeWidth={2.5} />
             </Button>
         </div>

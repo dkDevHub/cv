@@ -26,7 +26,7 @@
     } */
 
     .bg-liquid-glass {
-        backdrop-filter: url(#de-glass-distortion) blur(2px);
+        backdrop-filter: url(#de-glass-distortion) blur(4px);
     }
 }
 
