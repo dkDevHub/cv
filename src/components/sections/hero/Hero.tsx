@@ -44,8 +44,8 @@ function Hero({ className }: Props) {
                                 }
                             >
                                 Frontend
-                            </span>
-                            <span>{" developer"}</span>
+                            </span>{" "}
+                            <span>{"developer"}</span>
                         </h1>
                     </SplitText>
                     <p className={cn(cl.subtitle, "js-show-anim")}>
