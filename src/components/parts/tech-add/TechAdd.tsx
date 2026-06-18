@@ -1,8 +1,13 @@
 "use client"
 import { Card } from "@/components/atomic/card/Card";
 import cl from "./TechAdd.module.css"
-import Marquee from "react-fast-marquee";
+//import Marquee from "react-fast-marquee";
 import { cn } from "@/lib/utils";
+import dynamic from "next/dynamic";
+
+const Marquee = dynamic(() => import("react-fast-marquee"), {
+    ssr: false,
+});
 
 const additionalSkills: string[] = [
     "Advanced CSS (:has, :not, ...)",
@@ -43,7 +48,7 @@ const [upperSkills, lowerSkills] = additionalSkills.reduce<[string[], string[]]>
     [[], []],
 );
 
-function TechAdd() {    
+function TechAdd() {
     return (
         <div className={cl.tech_add}>
             <div className={cl.cards}>

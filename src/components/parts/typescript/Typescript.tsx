@@ -1,6 +1,6 @@
 import CardGlow from "@/components/atomic/card-glow/CardGlow";
 import cl from "./Typescript.module.css"
-import { CodeBlock } from "../code-block/CodeBlock";
+import CodeBlock from "@/components/parts/code-block/CodeBlock";
 import Image from "next/image";
 import TsLogo from "@/assets/brand/ts.svg";
 import { cn } from "@/lib/utils";

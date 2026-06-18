@@ -1,11 +1,17 @@
+"use client"
 import Image from "next/image";
-import Marquee from "react-fast-marquee";
+//import Marquee from "react-fast-marquee";
 import NextJsLogo from "@/assets/brand/nextjs-icon.svg";
 import NodeJsLogo from "@/assets/brand/nodejs.svg";
 import ShadcnLogo from "@/assets/brand/shadcn.svg";
 import ZustandLogo from "@/assets/brand/zustand.svg";
 import TsLogo from "@/assets/brand/ts.svg";
 import TailwindLogo from "@/assets/brand/tailwindcss.svg";
+import dynamic from "next/dynamic";
+
+const Marquee = dynamic(() => import("react-fast-marquee"), {
+    ssr: false,
+});
 
 function BrandMarquee() {
     return (

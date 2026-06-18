@@ -1,23 +1,16 @@
-import { Outfit, Raleway, Merriweather, Noto_Color_Emoji } from "next/font/google";
+import { Outfit, Raleway, Noto_Color_Emoji } from "next/font/google";
 
 export const ralewayFont = Raleway({
     display: "swap",
     variable: "--font-raleway",
-    subsets: ["latin-ext", "cyrillic-ext"],
+    subsets: ["latin"],
 });
 
 export const outfitFont = Outfit({
     display: "swap",
     variable: "--font-outfit",
-    subsets: ["latin-ext"],
-    weight: ["400", "500", "600", "700", "800", "900"],
-});
-
-export const merriweatherFont = Merriweather({
-    display: "swap",
-    variable: "--font-lora",
-    subsets: ["latin-ext", "cyrillic-ext"],
-    weight: ["400", "500", "600", "700"],
+    subsets: ["latin"],
+    weight: ["500", "700", "800"],
 });
 
 export const notoColorEmojiFont = Noto_Color_Emoji({
@@ -27,4 +20,4 @@ export const notoColorEmojiFont = Noto_Color_Emoji({
     weight: "400",
 });
 
-export const connectFontClass = `${outfitFont.variable} ${merriweatherFont.variable} ${ralewayFont.variable} ${notoColorEmojiFont.variable}`;
+export const connectFontClass = `${outfitFont.variable} ${ralewayFont.variable} ${notoColorEmojiFont.variable}`;

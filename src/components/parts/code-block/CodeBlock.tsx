@@ -13,7 +13,7 @@ function getPermissions(user: User) {
 
 export { getPermissions };`;
 
-export async function CodeBlock() {
+async function CodeBlock() {
     const highlightedHtml = await codeToHtml(code, {
         lang: "typescript",
         theme: "dracula"
@@ -35,3 +35,5 @@ export async function CodeBlock() {
         />
     );
 }
+
+export default CodeBlock

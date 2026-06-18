@@ -3,10 +3,16 @@ import cl from "./UiKit.module.css";
 import { cn } from "@/lib/utils";
 import UiKitCards from "@/components/parts/ui-kit-cards/UiKitCards";
 import Divider from "@/components/atomic/divider/Divider";
-import CardNp from "@/components/parts/card-np/CardNp";
-import CardBinance from "@/components/parts/card-binance/CardBinance";
-import CardGitHub from "@/components/parts/card-github/CardGitHub";
-import UiKitPhone from "@/components/parts/ui-kit-phone/UiKitPhone";
+// import CardNp from "@/components/parts/card-np/CardNp";
+// import CardBinance from "@/components/parts/card-binance/CardBinance";
+// import CardGitHub from "@/components/parts/card-github/CardGitHub";
+//import UiKitPhone from "@/components/parts/ui-kit-phone/UiKitPhone";
+import dynamic from "next/dynamic";
+
+const UiKitPhone = dynamic(() => import("@/components/parts/ui-kit-phone/UiKitPhone"));
+const CardNp = dynamic(() => import("@/components/parts/card-np/CardNp"));
+const CardBinance = dynamic(() => import("@/components/parts/card-binance/CardBinance"));
+const CardGitHub = dynamic(() => import("@/components/parts/card-github/CardGitHub"));
 
 function UiKit() {
     return (
