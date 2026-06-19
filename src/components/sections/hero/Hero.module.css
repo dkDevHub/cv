@@ -72,6 +72,7 @@
 }
 
 .marquee {
+    width: 100%;
     max-width: 700px; 
     padding: 8px;
     mask-image: linear-gradient(

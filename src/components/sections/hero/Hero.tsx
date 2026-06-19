@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import BrandMarquee from "@/components/atomic/brand-marquaee/BrandMarquee";
 import { ChevronDown } from "lucide-react";
 import CardMessage from "@/components/atomic/card-message/CardMessage";
-import SplitText from "@/components/atomic/split-text/SplitText";
+// import SplitText from "@/components/atomic/split-text/SplitText";
 import Scene from "@/components/atomic/scene/Scene";
 import { buttonVariants } from "@/components/atomic/button/variants";
 
@@ -19,7 +19,6 @@ function Hero({ className }: Props) {
                 <div className={cl.content}>
                     {/* <SplitText>
                         <h1 className={`${cl.headline} hero-headline`} id="hero">
-                            <span className="hidden sm:inline">👋 </span>
                             <span>{"I'm Dmytro"}</span>
                             <br />
                             <span
@@ -34,7 +33,6 @@ function Hero({ className }: Props) {
                         </h1>
                     </SplitText> */}
                     <h1 className={`${cl.headline} hero-headline`} id="hero">
-                        <span className="hidden sm:inline">👋 </span>
                         <span>{"I'm Dmytro"}</span>
                         <br />
                         <span

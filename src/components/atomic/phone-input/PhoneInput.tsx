@@ -1,9 +1,12 @@
 "use client"
 import { Phone } from "lucide-react";
-import Input from "../input/Input";
 import options from "./mask";
 import { useMaskito } from "@maskito/react";
+import dynamic from "next/dynamic";
 
+const Input = dynamic(() => import("@/components/atomic/input/Input"), {
+    ssr: false,
+});
 interface Props {
     id?: string;
     name?: string;

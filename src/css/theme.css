@@ -201,7 +201,7 @@
 }
 
 @theme {
-    --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Noto Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif, 'c', 'Noto Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     --font-headline: var(--font-raleway), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --breakpoint-2xl: 1400px;
     --text-ss: 0.625rem;

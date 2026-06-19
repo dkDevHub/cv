@@ -4,20 +4,21 @@ export const ralewayFont = Raleway({
     display: "swap",
     variable: "--font-raleway",
     subsets: ["latin"],
+    weight: ["700"],
 });
 
 export const outfitFont = Outfit({
     display: "swap",
     variable: "--font-outfit",
     subsets: ["latin"],
-    weight: ["500", "700", "800"],
+    weight: ["500", "700"],
 });
 
-export const notoColorEmojiFont = Noto_Color_Emoji({
-    display: "swap",
-    variable: "--font-noto-color-emoji",
-    subsets: ["emoji"],
-    weight: "400",
-});
+// export const notoColorEmojiFont = Noto_Color_Emoji({
+//     display: "swap",
+//     variable: "--font-noto-color-emoji",
+//     subsets: ["emoji"],
+//     weight: "400",
+// });
 
-export const connectFontClass = `${outfitFont.variable} ${ralewayFont.variable} ${notoColorEmojiFont.variable}`;
+export const connectFontClass = `${outfitFont.variable} ${ralewayFont.variable}`;

@@ -3,6 +3,7 @@ import cl from "./CurrantFocus.module.css"
 import Image from "next/image";
 import AstroImg from "@/assets/brand/astro.svg";
 import BunImg from "@/assets/brand/bun.svg";
+import { GBFlag } from "@/components/atomic/svg/Svg";
 
 function CurrantFocus() {
     return (
@@ -13,7 +14,12 @@ function CurrantFocus() {
             </div>
             <div className={cl.info}>
                 <div className={cl.exp}>
-                    <strong className={cn("h2 js-show-anim", cl.glow)}>🇬🇧 English</strong>
+                    <strong className={cn("h2 js-show-anim", cl.glow)}>
+                        <span className="flex items-center gap-1">
+                            <GBFlag width={36} height={36} />
+                            <span>English</span>
+                        </span>
+                    </strong>
                     <span className="text-foreground/40 md:text-lg js-show-anim">
                         Upper-Intermediate B2 • Fluent tech communication and documentation
                     </span>
@@ -29,7 +35,13 @@ function CurrantFocus() {
                 </div>
                 <div className={cl.exp}>
                     <strong className={cn("h2 js-show-anim flex gap-2", cl.glow)}>
-                        <Image className="translate-y-1 w-auto h-8" width={85} height={107} src={AstroImg.src} alt="astro" />
+                        <Image
+                            className="translate-y-1 w-auto h-8"
+                            width={85}
+                            height={107}
+                            src={AstroImg.src}
+                            alt="astro"
+                        />
                         <span>Astro JS</span>
                     </strong>
                     <span className="text-foreground/40 md:text-lg js-show-anim">

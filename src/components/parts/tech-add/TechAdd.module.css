@@ -13,6 +13,8 @@
 }
 
 .marquee {
+    height: 53px;
+    
     mask-image: linear-gradient(
         to right,
         transparent 1%,
