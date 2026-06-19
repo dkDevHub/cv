@@ -13,13 +13,13 @@ interface Props {
 }
 
 function NpCity({ name, id, required }: Props) {
-    const { data: cities, refetch } = useService((search: string) => NpService.searchCity(search), false);
+    const { data: cities, refetch, isPending } = useService((search: string) => NpService.searchCity(search), false);
     const debounced = useDebounceCallback((value: string) => {
         refetch(value);
     }, 300);
 
     const handleInputChange = (value: string) => {
-        if (value === undefined || value === null) return;
+        if (value === undefined || value === null || value.length < 3) return;
         debounced(value);
     }
 
@@ -34,6 +34,7 @@ function NpCity({ name, id, required }: Props) {
 
     return (
         <Combobox
+            isLoading={isPending}
             icon={MapPin}
             values={cities}
             filteredItems={cities || []}

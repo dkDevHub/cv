@@ -6,6 +6,7 @@ import { ChevronDown, LucideProps, X } from "lucide-react";
 import { ComponentProps } from "react";
 import { ComboboxItem } from "@/types/types";
 import { cn } from "@/lib/utils";
+import { useClassNameState } from "@/hooks/useClassNameState";
 
 type RootProps = ComponentProps<typeof ComboboxUi.Root>;
 
@@ -18,17 +19,35 @@ interface Props extends RootProps {
     required?: boolean;
     onClear?: () => void;
     ignoreFilledStyle?: boolean;
+    isLoading?: boolean;
 }
 
-function Combobox({ icon: Icon, values, onInputValueChange, placeholder, name, id, required, ignoreFilledStyle, ...rootProps }: Props) {
-    const classes = `${cl.input_group} ${Icon ? cl.input_icon : ""}`;
+function Combobox({
+    icon: Icon,
+    values,
+    onInputValueChange,
+    placeholder,
+    name,
+    id,
+    required,
+    ignoreFilledStyle,
+    isLoading = false,
+    ...rootProps
+}: Props) {
+    // minimum loading duration
+    const loadingClass = useClassNameState(cl.loading, isLoading, 600);
+    const classes = `${cl.input_group} ${Icon ? cl.input_icon : ""} ${loadingClass}`;
 
-    const emptyTitle = values ?  "Нічого не знайдено" : "Введіть 3 букви";
+    const emptyTitle = values ? "Нічого не знайдено" : "Введіть 3 букви";
 
     return (
         <ComboboxUi.Root onInputValueChange={onInputValueChange} {...rootProps}>
             <ComboboxUi.InputGroup className={cn(classes, { [cl.ignore_filled_state]: ignoreFilledStyle })}>
-                {Icon && <Icon size={16} strokeWidth={2.25} className={cl.icon} />}
+                {Icon && (
+                    <div className={cl.icon}>
+                        <Icon size={16} strokeWidth={2.25} />
+                    </div>
+                )}
                 <ComboboxUi.Input
                     placeholder={placeholder}
                     className={cl.input}
