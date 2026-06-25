@@ -23,6 +23,7 @@ const nextConfig: NextConfig = {
     experimental: {
         inlineCss: true,
     },
+    cacheComponents: true,
 };
 
 export default nextConfig;

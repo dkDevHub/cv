@@ -14,6 +14,8 @@ function getPermissions(user: User) {
 export { getPermissions };`;
 
 async function CodeBlock() {
+    "use cache";
+    
     const highlightedHtml = await codeToHtml(code, {
         lang: "typescript",
         theme: "dracula"
