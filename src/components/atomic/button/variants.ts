@@ -4,12 +4,12 @@ import { cva } from "class-variance-authority";
 export const buttonVariants = cva(cl.button, {
     variants: {
         variant: {
-            default: "",
+            default: cl.button_primary,
             neutral: cl.button_neutral,
             outline: cl.button_outline,
             ghost: cl.button_ghost,
             shadow: cl.button_shadow,
-            glass: cl.button_glass
+            glass: cl.button_glass,
         },
         size: {
             default: [],

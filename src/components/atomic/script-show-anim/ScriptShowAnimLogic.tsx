@@ -23,7 +23,7 @@ export default function ScriptShowAnimLogic() {
             isProcessingQueue = true;
             const nextElement = appearanceQueue.shift();
             nextElement?.classList.add("visible");
-            setTimeout(processQueue, 100);
+            setTimeout(processQueue, 70);
         };
 
         const observer = new IntersectionObserver(

@@ -45,8 +45,6 @@
     align-items: center;
     gap: 4px;
     flex-shrink: 0;
-    background-color: var(--primary);
-    color: var(--background);
     padding: 0 20px;
     border-radius: 10px;
     height: 40px;
@@ -57,7 +55,14 @@
 .button:active {
     transform: scale(0.93);
 }
-.button:hover {
+
+.button.button_primary {
+    background-color: var(--primary);
+    background-image: linear-gradient(to bottom, oklch(var(--foreground-oklch) / .15), transparent);
+    color: var(--background);
+}
+
+.button.button_primary:hover {
     background-color: oklch(var(--primary-oklch) / 0.75);
 }
 
@@ -95,6 +100,7 @@
     background-color: transparent;
     border: 2px solid var(--foreground);
     color: var(--foreground);
+    background-image: linear-gradient(to bottom, oklch(var(--foreground-oklch) / .1), transparent);
 }
 .button_outline:hover {
     background-color: var(--foreground);
@@ -122,6 +128,8 @@
 .button_neutral {
     background-color: var(--foreground);
     color: var(--background);
+    background-image: linear-gradient(to top, oklch(var(--background-oklch) / .15), transparent);
+    box-shadow: 0 10px 15px -3px oklch(var(--foreground-oklch) / 0.1), 0 4px 6px -4px oklch(var(--foreground-oklch) / 0.1);
 }
 
 .button_neutral:hover {
