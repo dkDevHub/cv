@@ -51,7 +51,7 @@ function Hero({ className }: Props) {
                     </p>
 
                     <div className="js-show-anim self-center">
-                        <a href="#tech" className={cn("mt-12 w-60 !shadow-lg shadow-primary/33", buttonVariants())}>
+                        <a href="#tech" className={cn("mt-12 w-60 shadow-lg! shadow-primary/33", buttonVariants())}>
                             More <ChevronDown size="22" strokeWidth={2.25} />
                         </a>
                     </div>
