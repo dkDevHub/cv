@@ -26,7 +26,7 @@ function TechGrid() {
             <div className={cn(cl.tech, cl.next)}>
                 <span className={cn(cl.tech_title, "js-show-anim")}>
                     <Image
-                        className="invert w-24 h-auto sm:w-37.5 sm:h-auto"
+                        className="w-24 h-auto sm:w-37.5 sm:h-auto"
                         width={150}
                         height={30}
                         src={NextJsLogo.src}

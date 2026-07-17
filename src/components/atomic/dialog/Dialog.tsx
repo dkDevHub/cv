@@ -26,7 +26,11 @@ export default function ExampleDialog() {
                     </div>
                     <div className={cl.actions}>
                         <Dialog.Close className={buttonVariants({ size: "sm", variant: "ghost" })}>Cancel</Dialog.Close>
-                        <Button size="sm" className="bg-destructive! text-foreground! hover:bg-destructive/75!">
+                        <Button
+                            size="sm"
+                            variant="neutral"
+                            className="bg-destructive! text-foreground! hover:bg-destructive/75!"
+                        >
                             <Trash2 size={16} strokeWidth={2.5} />
                             <span>Delete</span>
                         </Button>

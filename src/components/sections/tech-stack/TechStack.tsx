@@ -4,6 +4,7 @@ import Typescript from "@/components/parts/typescript/Typescript";
 import Divider from "@/components/atomic/divider/Divider";
 import TechGrid from "@/components/parts/tech-grid/TechGrid";
 import TechAdd from "@/components/parts/tech-add/TechAdd";
+import TechCards from "@/components/parts/texh-cards/TechCards";
 
 function TechStack() {
     return (
@@ -16,7 +17,8 @@ function TechStack() {
                 <Divider>
                     <span className="text-foreground/66 font-semibold">Technology Stack</span>
                 </Divider>
-                <TechGrid />
+                {/* <TechGrid /> */}
+                <TechCards/>
                 <Divider>
                     <span className="text-foreground/66 font-semibold">Additional skills</span>
                 </Divider>

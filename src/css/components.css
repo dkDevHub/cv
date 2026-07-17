@@ -49,7 +49,7 @@
 .js-show-anim {
     --easing: cubic-bezier(0, 0.55, 0.45, 1);
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(24px);
     transition: opacity 1.4s var(--easing), 
                 transform 1.4s var(--easing);
     will-change: opacity, transform;

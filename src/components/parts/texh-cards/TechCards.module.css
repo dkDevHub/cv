@@ -1,0 +1,280 @@
+.block {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    @media (--lg) {
+        flex-direction: row;
+    }
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 580px;
+}
+
+.next {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+
+    @media (--sm) {
+        padding: 32px;
+    }
+}
+
+.next_content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card.react {
+    --shadow2-oklch: 66.7% 0.295 322.15;
+}
+
+.card.zustand {
+    --shadow2-oklch: 94.5% 0.129 101.54;
+}
+
+.card.tailwind {
+    --shadow2-oklch: 68.5% 0.169 237.323;
+}
+
+.card {
+    background-color: var(--card);
+    background-image: linear-gradient(to top, oklch(var(--foreground-oklch) / .1), transparent 50%);
+    backdrop-filter: blur(4px);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    --shadow-oklch: var(--foreground-oklch);
+    --shadow2-oklch: 66.7% 0.295 322.15;
+    box-shadow: 
+        inset 2px 2px 1px 0 oklch(var(--shadow-oklch) / .1),
+        inset -2px -2px 2px 1px oklch(var(--shadow2-oklch) / .1),
+        0 4px 8px 0 oklch(var(--shadow2-oklch) / .1),
+        0 6px 20px 0 oklch(var(--shadow2-oklch) / .07);
+    /* box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.1),
+        inset -2px -2px 2px 1px rgba(255, 255, 255, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05); */
+    border-radius: 16px;
+    transition: opacity .3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card p {
+    color: oklch(var(--foreground-oklch) / 0.7);
+    transition: color .3s;
+    font-weight: 300;
+}
+
+.card strong {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-shadow: 0 0 10px oklch(var(--foreground-oklch) / 0.3);
+}
+
+.glow {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    transform: translate(-25%, 50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    opacity: 0.1;
+    filter: blur(28px);
+    transition: opacity .3s, transform .3s, background-color .3s;
+}
+
+@media (--md) {
+    .card:hover .glow {
+        opacity: 0.4;
+        transform: scale(3) translate(-25%, 50%);
+    }
+
+    .card:hover {
+        opacity: 1;
+    }
+
+    .card:hover  p {
+        color: var(--foreground);
+    }
+}
+
+@media not (--md) {
+    .card:active .glow {
+        opacity: 0.4;
+        transform: scale(3) translate(-25%, 50%);
+    }
+
+    .card:active {
+        opacity: 1;
+    }
+
+    .card:active  p {
+        color: var(--foreground);
+    }
+}
+
+.logo_bg {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.1;
+    mask-image: linear-gradient(to right, transparent 0, transparent 50%, black 90%);
+    background-image: var(--bg-image);
+    background-repeat: repeat;
+    background-position: -4px 5px;
+    background-size: 44px 44px;
+}
+
+.zustand .logo_bg {
+    opacity: 0.15;
+    background-size: 44px 44px;
+}
+
+.tailwind .logo_bg {
+    opacity: 0.1;
+    background-size: 40px 40px;
+    background-position: 4px 5px;
+}
+
+.next {
+    --shine-color: oklch(var(--foreground-oklch) / 0.5);
+}
+
+.next .title {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.next .small {
+    transform: translateY(5px);
+    color: oklch(var(--foreground-oklch) / 0.7);
+    font-size: 18px;
+}
+
+.react {
+    --shine-color: var(--color-fuchsia-300);
+
+    .glow {
+        background-color: var(--color-fuchsia-400);
+    }
+
+    @media (--md) {
+        &:hover .glow {
+            background-color: var(--color-fuchsia-500);
+        }
+    }
+
+    @media not (--md) {
+        &:active .glow {
+            background-color: var(--color-fuchsia-500);
+        }
+    }
+}
+
+.zustand {
+    --shine-color: var(--color-orange-300);
+
+    .glow {
+        background-color: var(--color-yellow-200);
+    }
+
+    @media (--md) {
+        &:hover .glow {
+            background-color: var(--color-yellow-300);
+        }
+    }
+
+    @media not (--md) {
+        &:active .glow {
+            background-color: var(--color-yellow-300);
+        }
+    }
+}
+
+.tailwind {
+    --shine-color: var(--color-sky-300);
+
+    .glow {
+        background-color: var(--color-sky-800);
+    }
+
+    @media (--md) {
+        &:hover .glow {
+            background-color: var(--color-sky-500);
+        }
+    }
+
+    @media not (--md) {
+        &:active .glow {
+            background-color: var(--color-sky-500);
+        }
+    }
+}
+
+@keyframes shine {
+    0% {
+        background-position: 200% center;
+    }
+    100% {
+        background-position: -200% center;
+    }
+}
+
+.accent {
+    --initial-color: oklch(var(--foreground-oklch) / 0.9);
+    text-shadow: 0 0 4px oklch(var(--foreground-oklch) / 0.5);
+    color: transparent;
+    -webkit-background-clip: text;
+    background: linear-gradient(120deg, var(--initial-color) 10%, var(--shine-color) 50%, var(--initial-color) 90% );
+    background-clip: text;
+    background-size: 200% auto;
+    animation: shine 5s infinite ease-out;
+}
+
+.tech_grid_bg {
+    --inset: -60px;
+    --grid-color: rgb(50, 50, 50);
+    position: absolute;
+    top: var(--inset);
+    left: var(--inset);
+    bottom: var(--inset);
+    right: var(--inset);
+    background-image: linear-gradient(var(--grid-color) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(90deg, var(--grid-color) 1px, rgba(0, 0, 0, 0) 1px);
+    background-repeat: repeat;
+    background-size: 52px 52px;
+    mask-image: radial-gradient(closest-side at center, black 30%, transparent 100%);
+    z-index: -1;
+    max-width: 100%;
+}

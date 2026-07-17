@@ -58,7 +58,7 @@
 
 .button.button_primary {
     background-color: var(--primary);
-    background-image: linear-gradient(to bottom, oklch(var(--foreground-oklch) / .15), transparent);
+    background-image: linear-gradient(to bottom, oklch(var(--foreground-oklch) / 0.2), transparent 50%);
     color: var(--background);
 }
 
@@ -128,7 +128,7 @@
 .button_neutral {
     background-color: var(--foreground);
     color: var(--background);
-    background-image: linear-gradient(to top, oklch(var(--background-oklch) / .15), transparent);
+    background-image: linear-gradient(to top, oklch(var(--background-oklch) / .1), transparent 50%);
     box-shadow: 0 10px 15px -3px oklch(var(--foreground-oklch) / 0.1), 0 4px 6px -4px oklch(var(--foreground-oklch) / 0.1);
 }
 

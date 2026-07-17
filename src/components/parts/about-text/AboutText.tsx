@@ -4,6 +4,7 @@ import Image from "next/image";
 import TelegramImg from "@/assets/brand/tg.svg";
 import CopyClick from "@/components/atomic/copy-click/CopyClick";
 import GitHubImg from "@/assets/brand/github.png";
+import { profile } from "@/lib/data";
 
 function AboutText() {
     return (
@@ -19,7 +20,7 @@ function AboutText() {
                 <strong className={cn("h2 js-show-anim", cl.glow)}>Contacts</strong>
                 <div className="flex  flex-col sm:gap-4 sm:flex-row">
                     <span className="text-foreground/40 text-sm lg:text-base js-show-anim flex gap-2">
-                        <CopyClick copyText="@dkcorpp">@dkcorpp</CopyClick>
+                        <CopyClick copyText={profile.telegram}>{profile.telegram}</CopyClick>
                         <Image
                             className="translate-y-px opacity-80"
                             width={16}
@@ -30,7 +31,7 @@ function AboutText() {
                     </span>
                     <span className="text-foreground/40 text-sm lg:text-base js-show-anim flex gap-2">
                         <a
-                            href="https://github.com/dkDevHub"
+                            href={profile.githubUrl}
                             target="_blank"
                             className="flex gap-2 items-center transition-colors hover:text-foreground"
                         >

@@ -6,9 +6,17 @@
     outline-offset: -1px;
     border-radius: 16px;
     box-shadow: 0 16px 40px #46394780;
-    
-    &:hover .bg {
-        filter: hue-rotate(-30deg) saturate(150%) brightness(120%);
+
+    @media (--md) {
+        &:hover .bg {
+            filter: hue-rotate(-30deg) saturate(150%) brightness(120%);
+        }
+    }
+
+    @media not (--md) {
+        &:active .bg {
+            filter: hue-rotate(-30deg) saturate(150%) brightness(120%);
+        }
     }
 
     @media (--sm) {
